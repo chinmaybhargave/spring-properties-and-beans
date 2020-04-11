@@ -16,14 +16,15 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	testImplementation "junit:junit:4.12" 
 }
 
 test {
-	useJUnitPlatform()
 	jvmArgs = [
 		'-Dexample.system-property.valuesArray=a,b,c',
 		'-Dexample.system-property.systemProperty=systemProeprtyValue',
