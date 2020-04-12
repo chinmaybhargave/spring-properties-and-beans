@@ -8,15 +8,21 @@ import java.util.Map;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.example.properties.ExampleProperties;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 @AutoConfigureMockMvc
 public class ApplicationTests {
+	
+	@Autowired
+	private ExampleProperties exampleProperties;
 	
 	// === system properties ====
 
@@ -97,5 +103,7 @@ public class ApplicationTests {
 		assertThat(this.defaultMap.size(), is(2));
 		assertThat(this.defaultMap.get("key1"), is(1));
 		assertThat(this.defaultMap.get("key2"), is(2));
+		
+		assertThat(this.exampleProperties.getSomeProperty(), is("123h13j12"));
 	}
 }
