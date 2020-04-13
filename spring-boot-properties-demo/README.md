@@ -14,5 +14,8 @@ This demo application demonstrates the usage of various properties/configuration
 SpringBoot : 2.2.6.RELEASE <br/>
 Spring Cloud Config Server : 2.2.1.RELEASE <br/>
 
-[TODO] 
-- @EnableConfigurationProperties Vs @Import
+ 
+## NOTES
+- @EnableConfigurationProperties :  This enables @ConfigurationProperties. This is enabled by default. This is a convenient way to quickly register @ConfigurationProperties annotated beans.
+
+- @Import : This is a convenient way to quickly register @Configuration annotated beans.
