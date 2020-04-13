@@ -11,5 +11,8 @@ This demo application demonstrates the usage of various properties/configuration
 	spring.cloud.config.server.git.username
 	spring.cloud.config.server.git.password
 
-SpringBoot : 2.2.6.RELEASE
-Spring Cloud Config Server : 2.2.1.RELEASE
+SpringBoot : 2.2.6.RELEASE <br/>
+Spring Cloud Config Server : 2.2.1.RELEASE <br/>
+
+[TODO] 
+- @EnableConfigurationProperties Vs @Import
