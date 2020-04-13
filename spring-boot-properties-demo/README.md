@@ -16,6 +16,9 @@ Spring Cloud Config Server : 2.2.1.RELEASE <br/>
 
  
 ## NOTES
-- @EnableConfigurationProperties :  This enables @ConfigurationProperties. This is enabled by default. This is a convenient way to quickly register @ConfigurationProperties annotated beans.
+- @EnableConfigurationProperties : This enables @ConfigurationProperties. This is a convenient way to quickly register @ConfigurationProperties annotated beans.
 
 - @Import : This is a convenient way to quickly register @Configuration annotated beans.
+
+- @ConfigurationPropertiesBinding : The ConfigurationPropertiesBindingPostProcessor is responsible to bind all external properties to the beans annotated with @ConfigurationProperties. This BeanPostProcessor also detects custom converters (besides the default ones) annotated with @ConfigurationPropertiesBinding for type conversion. This annotation enables us to map non-primitive data type properties to the Java Class by adding custom converters. For example, if we have mapped a date in string format to any property key and we want to convert that date in string format to any other format, say LocalDate. This can be achieved with by adding the mentioned annotation on Converter class.
+

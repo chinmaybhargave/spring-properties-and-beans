@@ -2,7 +2,10 @@ package com.example;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
@@ -108,6 +111,12 @@ public class ApplicationTests {
 		
 		assertThat(this.exampleProperties.getSomeProperty(), is("123h13j12"));
 		
+		LocalDate date = LocalDate.parse("03-25-2016", DateTimeFormatter.ofPattern("MM-dd-yyyy"));
+		LocalDate dateFromProperties = this.exampleProperties.getStartDate();
+		assertTrue(dateFromProperties.isEqual(date));
+		
 		assertThat(this.propertyFromCloud, is("value"));
+		
+		
 	}
 }

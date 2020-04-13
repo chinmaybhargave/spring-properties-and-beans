@@ -2,25 +2,25 @@
 
 This spring boot application demonstrates the usage of various Spring annotations.
 
-@Import
-@EnableConfigurationProperties
-@ConfigurationPropertiesBinding
-@Configuarion
+- @Import : This is a convenient way to import @Configuration annotated beans.
+- @EnableConfigurationProperties : This is a convenient way to quickly register/import @ConfigurationProperties annotated beans.
+- @ConfigurationPropertiesBinding
+- @Configuarion
+- @Bean
+- @Scope
+- @Primary
+- @Qualifier
+- @ConditionalOnMissingBean
+- @ConditionalOnProperty
+- @ComponentScan
+- @Component
+- @Controller
+- @Service
 
-@Bean
-@Scope
-@Primary
-@Qualifier
-@ConditionalOnMissingBean
-@ConditionalOnProperty
 
-@ComponentScan
-@Component
-@Controller
 //@RequestMapping
 //@Get
 //@Post
-@Service
 // @Repository
 
 Custom MethodArgumentResolver - @RequestBody
