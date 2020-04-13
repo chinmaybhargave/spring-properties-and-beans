@@ -10,4 +10,6 @@ spring:
           force-pull: true
           timeout: 30
           clone-on-start: false
-          uri: https://github.com/chinmaybhargave/spring-properties-and-beans.git        
+          uri: https://github.com/chinmaybhargave/spring-properties-and-beans.git
+          #username: 
+          #password:         
