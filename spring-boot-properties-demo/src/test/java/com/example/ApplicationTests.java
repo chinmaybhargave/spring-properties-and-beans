@@ -70,6 +70,8 @@ public class ApplicationTests {
 //		@Value("#{${example.property-file.defaul-mapOfValues}['key1'] ?: 5}")
 //		private Integer unknownMapKeyWithDefaultValue;
 
+	@Value("${example.cloud.key}")
+	private String propertyFromCloud;
 	
 	@Test
 	public void test_if_properties_are_being_set() {
@@ -105,5 +107,7 @@ public class ApplicationTests {
 		assertThat(this.defaultMap.get("key2"), is(2));
 		
 		assertThat(this.exampleProperties.getSomeProperty(), is("123h13j12"));
+		
+		assertThat(this.propertyFromCloud, is("value"));
 	}
 }

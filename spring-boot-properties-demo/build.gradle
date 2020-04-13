@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.cloud:spring-cloud-config-server:2.2.1.RELEASE'
 	
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
@@ -26,6 +27,7 @@ dependencies {
 
 test {
 	jvmArgs = [
+		'-Dspring.profiles.active=git,test',
 		'-Dexample.system-property.valuesArray=a,b,c',
 		'-Dexample.system-property.systemProperty=systemProeprtyValue',
 		'-DsystemPropertyKey=24hgjh23g423',
