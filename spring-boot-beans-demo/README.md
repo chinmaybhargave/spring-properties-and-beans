@@ -2,9 +2,6 @@
 
 This spring boot application demonstrates the usage of various Spring annotations.
 
-- @Import : This is a convenient way to import @Configuration annotated beans.
-- @EnableConfigurationProperties : This is a convenient way to quickly register/import @ConfigurationProperties annotated beans.
-- @ConfigurationPropertiesBinding
 - @Configuarion
 - @Bean
 - @Scope
