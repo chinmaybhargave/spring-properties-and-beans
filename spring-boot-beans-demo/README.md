@@ -9,6 +9,13 @@ This spring boot application demonstrates the usage of various Spring annotation
 - @Qualifier
 - @ConditionalOnMissingBean
 - @ConditionalOnProperty
+- @ConditionalOnClass 
+- @ConditionalOnMissingClass
+- @ConditionalOnExpression 
+- @ConditionalOnProperty
+- @ConditionalOnWebApplication
+- @ConditionalOnJava
+- @ConditionalOnJndi
 - @ComponentScan
 - @Component
 - @Controller
