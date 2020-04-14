@@ -10,12 +10,12 @@ public class ConditionalOnPropertyBeanConfig {
 	@Bean
 	@ConditionalOnProperty(prefix="example.conditional-on-property", name ="enabled", havingValue ="true")
 	public String testingConditonalOnProperty() {
-		return "ConditionalOnProperty SUCCESS";
+		return "SUCCESS-ConditionalOnProperty";
 	}
 	
 	@Bean
 	@ConditionalOnProperty(prefix="example.conditional-on-property", name ="key", havingValue ="true", matchIfMissing=true)
 	public String testingConditonalOnPropertyMatchIfMissing() {
-		return "ConditionalOnProperty match if missing SUCCESS";
+		return "SUCCESS-ConditionalOnProperty match if missing";
 	}
 }

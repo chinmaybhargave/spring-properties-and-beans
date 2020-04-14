@@ -10,6 +10,6 @@ public class ConditionalOnMissingClassBeanConfig {
 	
 	@Bean
 	public String testingConditonalOnMissingClass() {
-		return "BEAN NOT CREATED";
+		return "BEAN-NOT-CREATED";
 	}
 }

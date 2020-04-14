@@ -17,37 +17,37 @@ public class ConditionalOnBeanConfig {
 	@Bean
 	@ConditionalOnBean(name= {"primary-example-bean"})
 	public String testingConditionalOnBeanByName() {
-		return "SUCCESS";
+		return "SUCCESS-ConditionalOnBeanByName";
 	}
 	
 	@Bean
 	@ConditionalOnBean(value= ExampleBean.class)
 	public String testingConditionalOnBeanByValue() {
-		return "SUCCESS";
+		return "SUCCESS-ConditionalOnBeanByValue";
 	}
 	
 	@Bean
 	@ConditionalOnBean(type= "com.example.bean.ExampleBean")
 	public String testingConditionalOnBeanByType() {
-		return "SUCCESS";
+		return "SUCCESS-ConditionalOnBeanByType";
 	}
 	
 	@Bean
 	@ConditionalOnMissingBean(name= {"primary-example-bean"})
 	public String testingConditionalOnMissingBeanByName() {
-		return "SUCCESS";
+		return "BEAN-NOT-CREATED";
 	}
 	
 	@Bean
 	@ConditionalOnMissingBean(value= ExampleBean.class)
 	public String testingConditionalOnMissingBeanByValue() {
-		return "SUCCESS";
+		return "BEAN-NOT-CREATED";
 	}
 	
 	@Bean
 	@ConditionalOnMissingBean(type= "com.example.bean.ExampleBean")
 	public String testingConditionalOnMissingBeanByType() {
-		return "SUCCESS";
+		return "BEAN-NOT-CREATED";
 	}
 	
 	@Bean

@@ -20,5 +20,4 @@ public class ConditionalOnExpressionBeanConfig {
 	public ExampleCondtionalBean testingConditonalOnExpressionByFullyQualifiedName() {
 		return new ExampleCondtionalBean();
 	}
-	
 }
