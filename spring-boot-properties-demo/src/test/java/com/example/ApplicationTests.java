@@ -110,6 +110,9 @@ public class ApplicationTests {
 		assertThat(this.defaultMap.get("key2"), is(2));
 		
 		assertThat(this.exampleProperties.getSomeProperty(), is("123h13j12"));
+		assertThat(this.exampleProperties.getKeyValue().get("property"), is("value"));
+		assertThat(this.exampleProperties.getChildProperty().get("child-example").getKey(), is("value"));
+		assertThat(this.exampleProperties.getChildProperty().get("child-example").getKeyTwo(), is("value"));
 		
 		LocalDate date = LocalDate.parse("03-25-2016", DateTimeFormatter.ofPattern("MM-dd-yyyy"));
 		LocalDate dateFromProperties = this.exampleProperties.getStartDate();
